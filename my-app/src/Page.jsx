@@ -9,11 +9,11 @@ const Page = ({ currentPage, totalPages, onPrevious, onNext }) => {
     //   <button onClick={onNext} disabled={currentPage === totalPages}>Next</button>
     // </div>
     <div className="pagination">
-    {currentPage > 1 && (
+    {currentPage > 0 && (
       <button onClick={onPrevious}>Previous</button>
     )}
     <span>{` ${currentPage} `}</span>
-    {currentPage < totalPages && (
+    {currentPage === totalPages && (
       <button onClick={onNext}>Next</button>
     )}
   </div>
